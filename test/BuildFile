@@ -1,11 +1,6 @@
 <environment>
-  <lib name=CoreFramework>
-  <lib name=ParameterSet>
-  <lib name=FWCoreIntegration>
-  <use name=Framework/SealKernel>
-  <use name=Dictionary/ReflectionBuilder>
   <use name=boost>
-  <use name=seal>
+  <use name=FWCore/FWCoreIntegration>
 
 #Had to hard code in the -gcc-mt because I could find no
 # option in scram to tell it just to use boost_unit_test_framework
