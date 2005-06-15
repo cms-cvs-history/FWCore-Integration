@@ -17,5 +17,10 @@
    <flags SEAL_PLUGIN_NAME="TestOtherThingAnalyzer">
   </library>
 
+  <library file="HierarchicalEDProducer.cc" name=HierarchicalEDProducer>
+   <use name=FWCore/FWCoreServices>
+   <flags SEAL_PLUGIN_NAME="HierarchicalEDProducer">
+  </library>
+
 </environment>
 
