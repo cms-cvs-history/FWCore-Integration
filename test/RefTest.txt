@@ -2,15 +2,13 @@
 
 process TEST = {
 
-	path p = {Thing, OtherThing, output}
+	path p = {Thing, OtherThing, Analysis}
 
 	module Thing = ThingProducer {untracked int32 debugLevel = 1}
 
 	module OtherThing = OtherThingProducer {untracked int32 debugLevel = 1}
 
-	module output = PoolOutputModule {
-		untracked string fileName = 'RefTest.root'
-	}
+	module Analysis = OtherThingAnalyzer {untracked int32 debugLevel = 1}
 
 	source = EmptyInputService {untracked int32 maxEvents = 20}
 
