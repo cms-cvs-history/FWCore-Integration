@@ -1,0 +1,15 @@
+# Configuration file for EventSetupTest_t
+
+process TEST = {
+
+	path p = {WhatsItAnalyzer}
+
+	module WhatsItAnalyzer = WhatsItAnalyzer {}
+	
+	es_module = WhatsItESProducer {}
+	
+	es_source = DoodadESSource {}
+
+	source = EmptyInputService {untracked int32 maxEvents = 20}
+
+}
