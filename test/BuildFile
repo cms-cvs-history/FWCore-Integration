@@ -22,5 +22,17 @@
    <flags SEAL_PLUGIN_NAME="HierarchicalEDProducer">
   </library>
 
+  <library file="WhatsItESProducer.cc" name=WhatsItESProducer>
+   <flags SEAL_PLUGIN_NAME="WhatsItESProducer">
+  </library>
+
+  <library file="DoodadESSource.cc" name=DoodadESSource>
+   <flags SEAL_PLUGIN_NAME="DoodadESSource">
+  </library>
+
+  <library file="WhatsItAnalyzer.cc" name=WhatsItAnalyzer>
+   <flags SEAL_PLUGIN_NAME="WhatsItAnalyzer">
+  </library>
+
 </environment>
 
