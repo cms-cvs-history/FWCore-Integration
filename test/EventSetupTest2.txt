@@ -1,0 +1,21 @@
+# Configuration file for EventSetupTest_t
+
+process TEST = {
+
+	path p = { get & print }
+
+
+	module print = AsciiOutputModule { }
+	
+	es_module = WhatsItESProducer {}
+	
+	es_source = DoodadESSource {}
+
+	source = EmptyInputService {untracked int32 maxEvents = 20}
+
+	module get = EventSetupRecordDataGetter { VPSet toGet = {
+	       {string record = "GadgetRcd" 
+                vstring data = {"edmreftest::WhatsIt", "Blah"} } } 
+	       untracked bool verbose = true 
+	}
+}
