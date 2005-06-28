@@ -15,7 +15,8 @@ process TEST = {
 
 	module get = EventSetupRecordDataGetter { VPSet toGet = {
 	       {string record = "GadgetRcd" 
-                vstring data = {"edmreftest::WhatsIt", "Blah"} } } 
+                vstring data = {"edmreftest::WhatsIt", 
+                                "edmreftest::Doodad"} } } 
 	       untracked bool verbose = true 
 	}
 }
