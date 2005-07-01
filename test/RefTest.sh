@@ -1,3 +1,3 @@
 #!/bin/sh
 
-Mange --parameter-set RefTest.txt
+cmsRun --parameter-set RefTest.txt
