@@ -3,13 +3,15 @@
 
 #include "FWCore/EDProduct/interface/Ref.h"
 #include "FWCore/EDProduct/interface/RefVector.h"
+#include <vector>
 
 namespace edmreftest {
 
-  class ThingCollection;
+  class Thing;
+  typedef std::vector<Thing> ThingCollection;
 
   struct OtherThing {
-    virtual ~OtherThing() {}
+    ~OtherThing() {}
     OtherThing():a(), ref(), refVec() { }
     int a;
     edm::Ref<ThingCollection> ref;
