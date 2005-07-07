@@ -1,0 +1,22 @@
+
+
+process TEST = {
+
+  source = EmptyInputService {
+    int32 maxEvents = 3   # if we use the default, we run forever...
+  }
+
+  module cua = ContextUsingAnalyzer {
+   // no parameters required
+
+   PSet outer = {
+     int32 threshold = 2112
+     PSet inner = { 
+       double myParam = 3.14      
+     }
+   }
+  }
+
+
+  path p = { cua }
+}

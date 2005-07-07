@@ -13,6 +13,10 @@
    <flags SEAL_PLUGIN_NAME="TestOtherThingProducer">
   </library>
 
+  <library file="ContextUsingAnalyzer.cc" name=ContextUsingAnalyzer>
+   <flags SEAL_PLUGIN_NAME="ContextUsingAnalyzer">
+  </library>
+
   <library file="OtherThingAnalyzer.cc" name=TestOtherThingAnalyzer>
    <flags SEAL_PLUGIN_NAME="TestOtherThingAnalyzer">
   </library>
