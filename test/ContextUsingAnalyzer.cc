@@ -1,4 +1,4 @@
-#include "FWCore/FWCoreIntegration/test/ContextUsingAnalyzer.h"
+#include "FWCore/Integration/test/ContextUsingAnalyzer.h"
 
 #include "SealKernel/ComponentWrapper.h"
 

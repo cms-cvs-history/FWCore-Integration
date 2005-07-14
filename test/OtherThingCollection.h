@@ -1,7 +1,7 @@
 #ifndef EDMREFTEST_OTHERHTINGCOLLECTION_H
 #define EDMREFTEST_OTHERHTINGCOLLECTION_H
 
-#include "FWCore/FWCoreIntegration/test/OtherThing.h" 
+#include "FWCore/Integration/test/OtherThing.h" 
 #include <vector>
 
 
