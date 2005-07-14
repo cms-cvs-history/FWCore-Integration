@@ -17,6 +17,8 @@ process TEST = {
    }
   }
 
+  module iprod = IntProducer { int32 ivalue=5 }
 
-  path p = { cua }
+
+  path p = { iprod, cua }
 }

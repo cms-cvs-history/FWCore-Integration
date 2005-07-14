@@ -55,6 +55,7 @@ class ContextUsingAnalyzer : public edm::EDAnalyzer
  private:
   
   seal::Context context_;
+  OuterAlg alg_;
   
 };
 
