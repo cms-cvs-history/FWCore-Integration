@@ -2,6 +2,10 @@
 
 process TEST = {
 
+  PSet options = {
+    vstring SkipEvent = { "A", "B", "C" }
+  }
+
   source = EmptyInputService {
     int32 maxEvents = 3   # if we use the default, we run forever...
   }
