@@ -104,7 +104,7 @@ ContextUsingAnalyzer::~ContextUsingAnalyzer()
 
 
 void
-ContextUsingAnalyzer::analyze( const edm::Event& iEvent, const  edm::EventSetup& iSetup )
+ContextUsingAnalyzer::analyze( const edm::Event& iEvent, const  edm::EventSetup& /*iSetup*/ )
 {
    using namespace edm;
 
