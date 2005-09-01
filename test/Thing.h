@@ -1,5 +1,5 @@
-#ifndef EDMREFTEST_THING_H
-#define EDMREFTEST_THING_H
+#ifndef Integration_Thing_h
+#define Integration_Thing_h
 #include <vector>
 
 namespace edmreftest {

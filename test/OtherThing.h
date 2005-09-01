@@ -1,5 +1,5 @@
-#ifndef EDMREFTEST_OTHERTHING_H
-#define EDMREFTEST_OTHERTHING_H
+#ifndef Integration_OtherThing_h
+#define Integration_OtherThing_h
 
 #include "FWCore/EDProduct/interface/Ref.h"
 #include "FWCore/EDProduct/interface/RefVector.h"

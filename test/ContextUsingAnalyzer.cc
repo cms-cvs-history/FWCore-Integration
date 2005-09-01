@@ -93,7 +93,7 @@ OuterAlg::doWork()
 	    
 // ---------------------------------------------------
 
-ContextUsingAnalyzer::ContextUsingAnalyzer( const  edm::ParameterSet& iConfig ) : 
+ContextUsingAnalyzer::ContextUsingAnalyzer(const  edm::ParameterSet& iConfig) : 
   context_(),
   alg_(iConfig.getParameter<edm::ParameterSet>("outer"),&context_)
 { }
@@ -104,7 +104,7 @@ ContextUsingAnalyzer::~ContextUsingAnalyzer()
 
 
 void
-ContextUsingAnalyzer::analyze( const edm::Event& iEvent, const  edm::EventSetup& /*iSetup*/ )
+ContextUsingAnalyzer::analyze(const edm::Event& iEvent, const  edm::EventSetup& /*iSetup*/)
 {
    using namespace edm;
 
@@ -137,8 +137,8 @@ ContextUsingAnalyzer::analyze( const edm::Event& iEvent, const  edm::EventSetup&
    // we should clear the context here of any event related products
    // to prevent them from sticking around too long if the event
    // related products go into the data member context.
-   context_.erase( seal::ContextKey::find("event") );
-   context_.erase( seal::ContextKey::find("iprod") );
+   context_.erase(seal::ContextKey::find("event"));
+   context_.erase(seal::ContextKey::find("iprod"));
 
    // it seems to me that the Context facility is better suited
    // for long term state related object and is not very good

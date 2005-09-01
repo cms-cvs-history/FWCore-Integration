@@ -1,5 +1,5 @@
-#ifndef EDMREFTEST_OTHERHTINGCOLLECTION_H
-#define EDMREFTEST_OTHERHTINGCOLLECTION_H
+#ifndef Integration_OtherThingCollection_h
+#define Integration_OtherThingCollection_h
 
 #include "FWCore/Integration/test/OtherThing.h" 
 #include <vector>

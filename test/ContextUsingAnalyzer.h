@@ -1,5 +1,5 @@
-#ifndef FWCORE_FWCOREINTEGRATION_CONTEXTUSINGANALYZER_H
-#define FWCORE_FWCOREINTEGRATION_CONTEXTUSINGANALYZER_H
+#ifndef Integration_ContextUsingAnalyzer_h
+#define Integration_ContextUsingAnalyzer_h
 
 #include "FWCore/Framework/interface/Frameworkfwd.h"
 #include "FWCore/Framework/interface/EDAnalyzer.h"
@@ -47,10 +47,10 @@ class OuterAlg {
 class ContextUsingAnalyzer : public edm::EDAnalyzer 
 {
  public:
-  explicit ContextUsingAnalyzer( const edm::ParameterSet& );
+  explicit ContextUsingAnalyzer(const edm::ParameterSet&);
   ~ContextUsingAnalyzer();
   
-  virtual void analyze( const edm::Event&, const  edm::EventSetup& );
+  virtual void analyze(const edm::Event&, const  edm::EventSetup&);
 
  private:
   
