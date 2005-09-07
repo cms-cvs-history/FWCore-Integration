@@ -38,9 +38,5 @@
    <flags SEAL_PLUGIN_NAME="WhatsItAnalyzer">
   </library>
 
-  <bin name=testIntegration file=testRunner.cc,scheduleexecutorfrompset_t.cppunit.cc>
-    <use name=cppunit>
-    <use name=FWCore/Services>
-  </bin>
 </environment>
 
