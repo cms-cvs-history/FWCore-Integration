@@ -17,6 +17,15 @@
    <flags SEAL_PLUGIN_NAME="ContextUsingAnalyzer">
   </library>
 
+  <library file="ValueExample.cc" name=FWCoreIntegrationValueExample>
+   <flags SEAL_PLUGIN_NAME="FWCoreIntegrationValueExample">
+  </library>
+
+  <library file="UseValueExampleAnalyzer.cc" name=UseValueExampleAnalyzer>
+   <use name="FWCoreIntegrationValueExample">
+   <flags SEAL_PLUGIN_NAME="UseValueExampleAnalyzer">
+  </library>
+
   <library file="OtherThingAnalyzer.cc" name=TestOtherThingAnalyzer>
    <flags SEAL_PLUGIN_NAME="TestOtherThingAnalyzer">
   </library>

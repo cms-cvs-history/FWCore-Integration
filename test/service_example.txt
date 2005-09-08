@@ -1,0 +1,7 @@
+process test={
+  path p ={tester}
+  module tester = UseValueExampleAnalyzer{}
+  service = ValueExample{ int32 value=2 }
+
+  source = EmptyInputService {untracked int32 maxEvents = 20}
+}
