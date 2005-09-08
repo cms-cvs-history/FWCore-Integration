@@ -22,7 +22,7 @@
   </library>
 
   <library file="UseValueExampleAnalyzer.cc" name=UseValueExampleAnalyzer>
-   <use name="FWCoreIntegrationValueExample">
+   <lib name="FWCoreIntegrationValueExample">
    <flags SEAL_PLUGIN_NAME="UseValueExampleAnalyzer">
   </library>
 
