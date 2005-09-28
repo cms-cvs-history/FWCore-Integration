@@ -2,7 +2,7 @@
 
 process TEST = {
 
-  source = EmptyInputService {
+  source = EmptySource {
     int32 maxEvents = 1   # if we use the default, we run forever...
   }
 

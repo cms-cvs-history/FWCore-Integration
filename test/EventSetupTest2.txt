@@ -11,7 +11,7 @@ process TEST = {
 	
 	es_source = DoodadESSource {}
 
-	source = EmptyInputService {untracked int32 maxEvents = 20}
+	source = EmptySource {untracked int32 maxEvents = 20}
 
 	module get = EventSetupRecordDataGetter { VPSet toGet = {
 	       {string record = "GadgetRcd" 

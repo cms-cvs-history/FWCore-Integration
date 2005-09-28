@@ -6,7 +6,7 @@ process TEST = {
     vstring SkipEvent = { "A", "B", "C" }
   }
 
-  source = EmptyInputService {
+  source = EmptySource {
     int32 maxEvents = 3   # if we use the default, we run forever...
   }
 
