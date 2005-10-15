@@ -1,33 +1,41 @@
 <environment>
   <use name=boost>
-  <use name=FWCore/Integration>
 
 #Had to hard code in the -gcc-mt because I could find no
 # option in scram to tell it just to use boost_unit_test_framework
 
   <library file="ThingProducer.cc,ThingAlgorithm.cc" name=TestThingProducer>
    <flags SEAL_PLUGIN_NAME="TestThingProducer">
+   <use name=FWCore/Integration>
+   <use name=FWCore/Framework>
   </library>
 
   <library file="OtherThingProducer.cc,OtherThingAlgorithm.cc" name=TestOtherThingProducer>
    <flags SEAL_PLUGIN_NAME="TestOtherThingProducer">
+   <use name=FWCore/Integration>
+   <use name=FWCore/Framework>
   </library>
 
   <library file="ContextUsingAnalyzer.cc" name=ContextUsingAnalyzer>
    <flags SEAL_PLUGIN_NAME="ContextUsingAnalyzer">
+   <use name=FWCore/Framework>
   </library>
 
   <library file="ValueExample.cc" name=FWCoreIntegrationValueExample>
    <flags SEAL_PLUGIN_NAME="FWCoreIntegrationValueExample">
+   <use name=FWCore/Framework>
   </library>
 
   <library file="UseValueExampleAnalyzer.cc" name=UseValueExampleAnalyzer>
    <lib name="FWCoreIntegrationValueExample">
    <flags SEAL_PLUGIN_NAME="UseValueExampleAnalyzer">
+   <use name=FWCore/Framework>
   </library>
 
   <library file="OtherThingAnalyzer.cc" name=TestOtherThingAnalyzer>
    <flags SEAL_PLUGIN_NAME="TestOtherThingAnalyzer">
+   <use name=FWCore/Integration>
+   <use name=FWCore/Framework>
   </library>
 
   <library file="HierarchicalEDProducer.cc" name=HierarchicalEDProducer>
@@ -35,16 +43,19 @@
    <flags SEAL_PLUGIN_NAME="HierarchicalEDProducer">
   </library>
 
-  <library file="WhatsItESProducer.cc" name=WhatsItESProducer>
+  <library file="WhatsItESProducer.cc,WhatsIt.cc,Doodad.cc,GadgetRcd.cc" name=WhatsItESProducer>
    <flags SEAL_PLUGIN_NAME="WhatsItESProducer">
+   <use name=FWCore/Framework>
   </library>
 
-  <library file="DoodadESSource.cc" name=DoodadESSource>
+  <library file="DoodadESSource.cc, Doodad.cc,GadgetRcd.cc" name=DoodadESSource>
    <flags SEAL_PLUGIN_NAME="DoodadESSource">
+   <use name=FWCore/Framework>
   </library>
 
-  <library file="WhatsItAnalyzer.cc" name=WhatsItAnalyzer>
+  <library file="WhatsItAnalyzer.cc,WhatsIt.cc,GadgetRcd.cc" name=WhatsItAnalyzer>
    <flags SEAL_PLUGIN_NAME="WhatsItAnalyzer">
+   <use name=FWCore/Framework>
   </library>
 
 </environment>
