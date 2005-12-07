@@ -1,3 +1,3 @@
 #!/bin/sh
 
-cmsRun --parameter-set RefTest.cfg
+cmsRun --parameter-set ${LOCAL_TEST_DIR}/RefTest.cfg
