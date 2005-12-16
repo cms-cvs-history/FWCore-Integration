@@ -50,6 +50,11 @@
    <use name=FWCore/Framework>
   </library>
 
+  <library file="DoodadESProducer.cc,Doodad.cc,GadgetRcd.cc" name=DoodadESProducer>
+   <flags SEAL_PLUGIN_NAME="DoodadESProducer">
+   <use name=FWCore/Framework>
+  </library>
+
   <library file="DoodadESSource.cc, Doodad.cc,GadgetRcd.cc" name=DoodadESSource>
    <flags SEAL_PLUGIN_NAME="DoodadESSource">
    <use name=FWCore/Framework>
