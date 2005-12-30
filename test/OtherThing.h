@@ -4,12 +4,9 @@
 #include "FWCore/EDProduct/interface/Ref.h"
 #include "FWCore/EDProduct/interface/RefVector.h"
 #include "FWCore/EDProduct/interface/RefProd.h"
-#include <vector>
+#include "FWCore/Integration/test/ThingCollectionfwd.h"
 
 namespace edmreftest {
-
-  class Thing;
-  typedef std::vector<Thing> ThingCollection;
 
   struct OtherThing {
     ~OtherThing() {}

@@ -2,12 +2,7 @@
 #define Integration_OtherThingCollection_h
 
 #include "FWCore/Integration/test/OtherThing.h" 
-#include <vector>
-
-
-namespace edmreftest {
-  typedef std::vector<OtherThing> OtherThingCollection;
-}
+#include "FWCore/Integration/test/OtherThingCollectionfwd.h" 
 
 #endif
 
