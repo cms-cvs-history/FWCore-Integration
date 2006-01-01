@@ -18,6 +18,12 @@
    <use name=FWCore/Framework>
   </library>
 
+  <library file="ThingExtSource.cc,ThingAlgorithm.cc" name=TestThingExtSource>
+   <flags SEAL_PLUGIN_NAME="TestThingExtSource">
+   <use name=FWCore/Integration>
+   <use name=FWCore/Framework>
+  </library>
+
   <library file="OtherThingProducer.cc,OtherThingAlgorithm.cc" name=TestOtherThingProducer>
    <flags SEAL_PLUGIN_NAME="TestOtherThingProducer">
    <use name=FWCore/Integration>
