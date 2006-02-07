@@ -1,9 +1,9 @@
 #ifndef Integration_OtherThing_h
 #define Integration_OtherThing_h
 
-#include "FWCore/EDProduct/interface/Ref.h"
-#include "FWCore/EDProduct/interface/RefVector.h"
-#include "FWCore/EDProduct/interface/RefProd.h"
+#include "DataFormats/Common/interface/Ref.h"
+#include "DataFormats/Common/interface/RefVector.h"
+#include "DataFormats/Common/interface/RefProd.h"
 #include "FWCore/Integration/test/ThingCollectionfwd.h"
 
 namespace edmreftest {
