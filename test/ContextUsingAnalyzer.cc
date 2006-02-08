@@ -1,5 +1,5 @@
 #include "FWCore/Integration/test/ContextUsingAnalyzer.h"
-#include "FWCore/Framework/src/ToyProducts.h"
+#include "DataFormats/Common/interface/ToyProducts.h"
 
 #include "SealKernel/ComponentWrapper.h"
 
