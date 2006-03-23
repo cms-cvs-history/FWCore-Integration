@@ -30,11 +30,6 @@
    <use name=FWCore/Framework>
   </library>
 
-  <library file="ContextUsingAnalyzer.cc" name=ContextUsingAnalyzer>
-   <flags SEAL_PLUGIN_NAME="ContextUsingAnalyzer">
-   <use name=FWCore/Framework>
-  </library>
-
   <library file="ValueExample.cc" name=FWCoreIntegrationValueExample>
    <flags SEAL_PLUGIN_NAME="FWCoreIntegrationValueExample">
    <use name=FWCore/Framework>
