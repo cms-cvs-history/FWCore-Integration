@@ -1,6 +1,5 @@
 <environment>
   <use name=boost>
-  <use name=sigcpp>
   <bin file=TestIntegration.cpp>
    <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test run_all_t.sh">
    <use name=FWCore/Utilities>
