@@ -72,5 +72,10 @@
    <use name=FWCore/Framework>
   </library>
 
+  <library file="WhatsItExtensionCordAnalyzer.cc,WhatsIt.cc,GadgetRcd.cc" name=WhatsItExtensionCordAnalyzer>
+   <flags SEAL_PLUGIN_NAME="WhatsItExtensionCordAnalyzer">
+   <use name=FWCore/Framework>
+  </library>
+
 </environment>
 
