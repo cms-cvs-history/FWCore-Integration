@@ -77,5 +77,10 @@
    <use name=FWCore/Framework>
   </library>
 
+  <library file="WhatsItWatcherAnalyzer.cc,WhatsIt.cc,GadgetRcd.cc" name=WhatsItWatcherAnalyzer>
+   <flags SEAL_PLUGIN_NAME="WhatsItWatcherAnalyzer">
+   <use name=FWCore/Framework>
+  </library>
+
 </environment>
 
