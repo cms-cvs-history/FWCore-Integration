@@ -47,6 +47,13 @@
    <use name=FWCore/Framework>
   </library>
 
+  <library file="ViewAnalyzer.cc" name=TestViewAnalyzer>
+   <flags SEAL_PLUGIN_NAME="TestViewAnalyzer">
+   <use name=DataFormats/TestObjects>
+   <use name=FWCore/Framework>
+  </library>
+
+
   <library file="HierarchicalEDProducer.cc" name=HierarchicalEDProducer>
    <use name=FWCore/Services>
    <flags SEAL_PLUGIN_NAME="HierarchicalEDProducer">
