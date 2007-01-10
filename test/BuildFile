@@ -1,8 +1,38 @@
 <environment>
   <use name=boost>
 
-  <bin file=TestIntegration.cpp>
-   <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test run_all_t.sh">
+  <bin file=TestIntegration.cpp name=TestIntegrationRef>
+   <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test refTest.sh">
+   <use name=FWCore/Utilities>
+  </bin>
+
+  <bin file=TestIntegration.cpp name=TestIntegrationGeneratedSource>
+   <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test inputSourceTest.sh">
+   <use name=FWCore/Utilities>
+  </bin>
+
+  <bin file=TestIntegration.cpp name=TestIntegrationExternalSource>
+   <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test inputExtSourceTest.sh">
+   <use name=FWCore/Utilities>
+  </bin>
+
+  <bin file=TestIntegration.cpp name=TestIntegrationRawSource>
+   <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test inputRawSourceTest.sh">
+   <use name=FWCore/Utilities>
+  </bin>
+
+  <bin file=TestIntegration.cpp name=TestIntegrationEventSetup>
+   <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test eventSetupTest.sh">
+   <use name=FWCore/Utilities>
+  </bin>
+
+  <bin file=TestIntegration.cpp name=TestIntegrationHierarchyExample>
+   <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test hierarchy_example.sh">
+   <use name=FWCore/Utilities>
+  </bin>
+
+  <bin file=TestIntegration.cpp name=TestIntegrationServiceExample>
+   <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test service_example.sh">
    <use name=FWCore/Utilities>
   </bin>
 
@@ -20,6 +50,12 @@
 
   <library file="ThingExtSource.cc,ThingAlgorithm.cc" name=TestThingExtSource>
    <flags SEAL_PLUGIN_NAME="TestThingExtSource">
+   <use name=DataFormats/TestObjects>
+   <use name=FWCore/Framework>
+  </library>
+
+  <library file="ThingRawSource.cc,ThingAlgorithm.cc" name=TestThingRawSource>
+   <flags SEAL_PLUGIN_NAME="TestThingRawSource">
    <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
   </library>

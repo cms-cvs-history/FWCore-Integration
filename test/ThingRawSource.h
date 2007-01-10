@@ -1,7 +1,7 @@
-#ifndef Integration_ThingExtSource_h
-#define Integration_ThingExtSource_h
+#ifndef Integration_ThingRawSource_h
+#define Integration_ThingRawSource_h
 
-/** \class ThingExtSource
+/** \class ThingRawSource
  *
  * \version   1st Version Dec. 27, 2005  
 
@@ -9,21 +9,21 @@
  ************************************************************/
 
 #include "FWCore/Framework/interface/Frameworkfwd.h"
-#include "FWCore/Framework/interface/ExternalInputSource.h"
+#include "FWCore/Framework/interface/RawInputSource.h"
 #include "FWCore/Integration/test/ThingAlgorithm.h"
 
 namespace edmtest {
-  class ThingExtSource : public edm::ExternalInputSource {
+  class ThingRawSource : public edm::RawInputSource {
   public:
 
     // The following is not yet used, but will be the primary
     // constructor when the parameter set system is available.
     //
-    explicit ThingExtSource(edm::ParameterSet const& pset, edm::InputSourceDescription const& desc);
+    explicit ThingRawSource(edm::ParameterSet const& pset, edm::InputSourceDescription const& desc);
 
-    virtual ~ThingExtSource();
+    virtual ~ThingRawSource();
 
-    virtual bool produce(edm::Event& e);
+    virtual std::auto_ptr<edm::Event> readOneEvent();
 
     virtual void beginRun(edm::Run& r);
 
@@ -35,6 +35,7 @@ namespace edmtest {
 
   private:
     ThingAlgorithm alg_;
+    edm::EventID eventID_;
   };
 }
 #endif

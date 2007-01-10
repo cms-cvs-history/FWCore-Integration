@@ -1,4 +1,4 @@
-#include "FWCore/Integration/test/ThingSource.h"
+#include "FWCore/Integration/test/ThingRawSource.h"
 #include "DataFormats/TestObjects/interface/ThingCollection.h"
 #include "FWCore/Framework/interface/Event.h"
 #include "FWCore/Framework/interface/LuminosityBlock.h"
@@ -6,8 +6,10 @@
 #include "FWCore/Framework/interface/InputSourceMacros.h"
 
 namespace edmtest {
-  ThingSource::ThingSource(edm::ParameterSet const& pset, edm::InputSourceDescription const& desc) :
-    GeneratedInputSource(pset, desc), alg_() {
+  ThingRawSource::ThingRawSource(edm::ParameterSet const& pset, edm::InputSourceDescription const& desc) :
+    RawInputSource(pset, desc), alg_(), eventID_(1, 1) {
+    setRunNumber(1);
+    setLuminosityBlockID(1);
     produces<ThingCollection>();
     produces<ThingCollection, edm::InLumi>("beginLumi");
     produces<ThingCollection, edm::InLumi>("endLumi");
@@ -16,26 +18,38 @@ namespace edmtest {
   }
 
   // Virtual destructor needed.
-  ThingSource::~ThingSource() { }  
+  ThingRawSource::~ThingRawSource() { }  
 
   // Functions that gets called by framework every event
-  bool ThingSource::produce(edm::Event& e) {
-    // Step A: Get Inputs 
+  std::auto_ptr<edm::Event> ThingRawSource::readOneEvent() {
+    edm::Timestamp tstamp;
+
+    // Fake running out of data
+    if (eventID_.event() > 2) return std::auto_ptr<edm::Event>();
 
     // Step B: Create empty output 
     std::auto_ptr<ThingCollection> result(new ThingCollection);  //Empty
 
     // Step C: Invoke the algorithm, passing in inputs (NONE) and getting back outputs.
     alg_.run(*result);
+ 
+    // Make an event.
+    // makeEvent is provided by the base class.
+    // You must call makeEvent,
+    // providing the eventId (containing run# and event#)
+    // and timestamp.
+    std::auto_ptr<edm::Event> e = makeEvent(eventID_, tstamp);
+    eventID_ = eventID_.next();
 
-    // Step D: Put outputs into event
-    e.put(result);
+    // put your product(s) into the event.  One put call per product.
+    e->put(result);
 
-    return true;
+    // return the auto_ptr.
+    return e;
   }
 
   // Functions that gets called by framework every luminosity block
-  void ThingSource::beginLuminosityBlock(edm::LuminosityBlock& lb) {
+  void ThingRawSource::beginLuminosityBlock(edm::LuminosityBlock& lb) {
     // Step A: Get Inputs 
 
     // Step B: Create empty output 
@@ -48,7 +62,7 @@ namespace edmtest {
     lb.put(result, "beginLumi");
   }
 
-  void ThingSource::endLuminosityBlock(edm::LuminosityBlock& lb) {
+  void ThingRawSource::endLuminosityBlock(edm::LuminosityBlock& lb) {
     // Step A: Get Inputs 
 
     // Step B: Create empty output 
@@ -62,7 +76,7 @@ namespace edmtest {
   }
 
   // Functions that gets called by framework every run
-  void ThingSource::beginRun(edm::Run& r) {
+  void ThingRawSource::beginRun(edm::Run& r) {
     // Step A: Get Inputs 
 
     // Step B: Create empty output 
@@ -75,7 +89,7 @@ namespace edmtest {
     r.put(result, "beginRun");
   }
 
-  void ThingSource::endRun(edm::Run& r) {
+  void ThingRawSource::endRun(edm::Run& r) {
     // Step A: Get Inputs 
 
     // Step B: Create empty output 
@@ -87,6 +101,7 @@ namespace edmtest {
     // Step D: Put outputs into event
     r.put(result, "endRun");
   }
+
 }
-using edmtest::ThingSource;
-DEFINE_FWK_INPUT_SOURCE(ThingSource);
+using edmtest::ThingRawSource;
+DEFINE_FWK_INPUT_SOURCE(ThingRawSource);
