@@ -62,23 +62,27 @@
 
   <library file="OtherThingProducer.cc,OtherThingAlgorithm.cc" name=TestOtherThingProducer>
    <flags SEAL_PLUGIN_NAME="TestOtherThingProducer">
+   <use name=DataFormats/Common>
    <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
   </library>
 
   <library file="ValueExample.cc" name=FWCoreIntegrationValueExample>
    <flags SEAL_PLUGIN_NAME="FWCoreIntegrationValueExample">
+   <use name=FWCore/ParameterSet>
    <use name=FWCore/Framework>
   </library>
 
   <library file="UseValueExampleAnalyzer.cc" name=UseValueExampleAnalyzer>
    <lib name="FWCoreIntegrationValueExample">
    <flags SEAL_PLUGIN_NAME="UseValueExampleAnalyzer">
+   <use name=FWCore/ParameterSet>
    <use name=FWCore/Framework>
   </library>
 
   <library file="OtherThingAnalyzer.cc" name=TestOtherThingAnalyzer>
    <flags SEAL_PLUGIN_NAME="TestOtherThingAnalyzer">
+   <use name=DataFormats/Common>
    <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
    <use name=FWCore/MessageLogger>
@@ -86,14 +90,15 @@
 
   <library file="ViewAnalyzer.cc" name=TestViewAnalyzer>
    <flags SEAL_PLUGIN_NAME="TestViewAnalyzer">
+   <use name=DataFormats/Common>
    <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
   </library>
 
-
   <library file="HierarchicalEDProducer.cc" name=HierarchicalEDProducer>
-   <use name=FWCore/Services>
    <flags SEAL_PLUGIN_NAME="HierarchicalEDProducer">
+   <use name=FWCore/ParameterSet>
+   <use name=FWCore/Framework>
   </library>
 
   <library file="WhatsItESProducer.cc,WhatsIt.cc,Doodad.cc,GadgetRcd.cc" name=WhatsItESProducer>
