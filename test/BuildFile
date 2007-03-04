@@ -16,9 +16,9 @@
    <use name=FWCore/Utilities>
   </bin>
 
-  <bin file=TestIntegration.cpp name=TestIntegrationRawSource>
-   <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test inputRawSourceTest.sh">
-   <use name=FWCore/Utilities>
+#  <bin file=TestIntegration.cpp name=TestIntegrationRawSource>
+#   <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test inputRawSourceTest.sh">
+#   <use name=FWCore/Utilities>
   </bin>
 
   <bin file=TestIntegration.cpp name=TestIntegrationEventSetup>
@@ -54,11 +54,11 @@
    <use name=FWCore/Framework>
   </library>
 
-  <library file="ThingRawSource.cc,ThingAlgorithm.cc" name=TestThingRawSource>
-   <flags SEAL_PLUGIN_NAME="TestThingRawSource">
-   <use name=DataFormats/TestObjects>
-   <use name=FWCore/Framework>
-  </library>
+#  <library file="ThingRawSource.cc,ThingAlgorithm.cc" name=TestThingRawSource>
+#   <flags SEAL_PLUGIN_NAME="TestThingRawSource">
+#   <use name=DataFormats/TestObjects>
+#   <use name=FWCore/Framework>
+#  </library>
 
   <library file="OtherThingProducer.cc,OtherThingAlgorithm.cc" name=TestOtherThingProducer>
    <flags SEAL_PLUGIN_NAME="TestOtherThingProducer">
