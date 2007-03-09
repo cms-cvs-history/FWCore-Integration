@@ -19,7 +19,7 @@
 #  <bin file=TestIntegration.cpp name=TestIntegrationRawSource>
 #   <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test inputRawSourceTest.sh">
 #   <use name=FWCore/Utilities>
-  </bin>
+#  </bin>
 
   <bin file=TestIntegration.cpp name=TestIntegrationEventSetup>
    <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test eventSetupTest.sh">
