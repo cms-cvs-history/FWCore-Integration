@@ -42,51 +42,58 @@
   </bin>
 
   <library file="ThingProducer.cc,ThingAlgorithm.cc" name=TestThingProducer>
-   <flags SEAL_PLUGIN_NAME="TestThingProducer">
+   <flags EDM_PLUGIN=1>
    <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
   </library>
 
   <library file="ThingSource.cc,ThingAlgorithm.cc" name=TestThingSource>
-   <flags SEAL_PLUGIN_NAME="TestThingSource">
+   <flags EDM_PLUGIN=1>
    <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
   </library>
 
   <library file="ThingExtSource.cc,ThingAlgorithm.cc" name=TestThingExtSource>
-   <flags SEAL_PLUGIN_NAME="TestThingExtSource">
+   <flags EDM_PLUGIN=1>
    <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
   </library>
 
 #  <library file="ThingRawSource.cc,ThingAlgorithm.cc" name=TestThingRawSource>
-#   <flags SEAL_PLUGIN_NAME="TestThingRawSource">
+#   <flags EDM_PLUGIN=1>
 #   <use name=DataFormats/TestObjects>
 #   <use name=FWCore/Framework>
 #  </library>
 
   <library file="OtherThingProducer.cc,OtherThingAlgorithm.cc" name=TestOtherThingProducer>
-   <flags SEAL_PLUGIN_NAME="TestOtherThingProducer">
+   <flags EDM_PLUGIN=1>
    <use name=DataFormats/Common>
    <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
   </library>
 
   <library file="ValueExample.cc" name=FWCoreIntegrationValueExample>
-   <flags SEAL_PLUGIN_NAME="FWCoreIntegrationValueExample">
    <use name=FWCore/ParameterSet>
    <use name=FWCore/Framework>
   </library>
 
+  <library file="ValueExamplePlugin.cc" name=FWCoreIntegrationValueExamplePlugin>
+   <flags EDM_PLUGIN=1>
+   <lib name="FWCoreIntegrationValueExample">
+   <use name=FWCore/ParameterSet>
+   <use name=FWCore/Framework>
+   <use name=FWCore/ServiceRegistry>
+  </library>
+
   <library file="UseValueExampleAnalyzer.cc" name=UseValueExampleAnalyzer>
    <lib name="FWCoreIntegrationValueExample">
-   <flags SEAL_PLUGIN_NAME="UseValueExampleAnalyzer">
+   <flags EDM_PLUGIN=1>
    <use name=FWCore/ParameterSet>
    <use name=FWCore/Framework>
   </library>
 
   <library file="OtherThingAnalyzer.cc" name=TestOtherThingAnalyzer>
-   <flags SEAL_PLUGIN_NAME="TestOtherThingAnalyzer">
+   <flags EDM_PLUGIN=1>
    <use name=DataFormats/Common>
    <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
@@ -94,45 +101,45 @@
   </library>
 
   <library file="ViewAnalyzer.cc" name=TestViewAnalyzer>
-   <flags SEAL_PLUGIN_NAME="TestViewAnalyzer">
+   <flags EDM_PLUGIN=1>
    <use name=DataFormats/Common>
    <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
   </library>
 
   <library file="HierarchicalEDProducer.cc" name=HierarchicalEDProducer>
-   <flags SEAL_PLUGIN_NAME="HierarchicalEDProducer">
+   <flags EDM_PLUGIN=1>
    <use name=FWCore/ParameterSet>
    <use name=FWCore/Framework>
   </library>
 
   <library file="WhatsItESProducer.cc,WhatsIt.cc,Doodad.cc,GadgetRcd.cc" name=WhatsItESProducer>
-   <flags SEAL_PLUGIN_NAME="WhatsItESProducer">
+   <flags EDM_PLUGIN=1>
    <use name=FWCore/Framework>
   </library>
 
   <library file="DoodadESProducer.cc,Doodad.cc,GadgetRcd.cc" name=DoodadESProducer>
-   <flags SEAL_PLUGIN_NAME="DoodadESProducer">
+   <flags EDM_PLUGIN=1>
    <use name=FWCore/Framework>
   </library>
 
   <library file="DoodadESSource.cc, Doodad.cc,GadgetRcd.cc" name=DoodadESSource>
-   <flags SEAL_PLUGIN_NAME="DoodadESSource">
+   <flags EDM_PLUGIN=1>
    <use name=FWCore/Framework>
   </library>
 
   <library file="WhatsItAnalyzer.cc,WhatsIt.cc,GadgetRcd.cc" name=WhatsItAnalyzer>
-   <flags SEAL_PLUGIN_NAME="WhatsItAnalyzer">
+   <flags EDM_PLUGIN=1>
    <use name=FWCore/Framework>
   </library>
 
   <library file="WhatsItExtensionCordAnalyzer.cc,WhatsIt.cc,GadgetRcd.cc" name=WhatsItExtensionCordAnalyzer>
-   <flags SEAL_PLUGIN_NAME="WhatsItExtensionCordAnalyzer">
+   <flags EDM_PLUGIN=1>
    <use name=FWCore/Framework>
   </library>
 
   <library file="WhatsItWatcherAnalyzer.cc,WhatsIt.cc,GadgetRcd.cc" name=WhatsItWatcherAnalyzer>
-   <flags SEAL_PLUGIN_NAME="WhatsItWatcherAnalyzer">
+   <flags EDM_PLUGIN=1>
    <use name=FWCore/Framework>
   </library>
 
