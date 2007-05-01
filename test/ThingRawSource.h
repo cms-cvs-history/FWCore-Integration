@@ -9,7 +9,7 @@
  ************************************************************/
 
 #include "FWCore/Framework/interface/Frameworkfwd.h"
-#include "FWCore/Framework/interface/RawInputSource.h"
+#include "FWCore/Sources/interface/RawInputSource.h"
 #include "FWCore/Integration/test/ThingAlgorithm.h"
 
 namespace edmtest {

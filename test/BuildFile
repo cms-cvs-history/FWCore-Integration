@@ -57,12 +57,14 @@
    <flags EDM_PLUGIN=1>
    <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
+   <use name=FWCore/Sources>
   </library>
 
 #  <library file="ThingRawSource.cc,ThingAlgorithm.cc" name=TestThingRawSource>
 #   <flags EDM_PLUGIN=1>
 #   <use name=DataFormats/TestObjects>
 #   <use name=FWCore/Framework>
+#   <use name=FWCore/Sources>
 #  </library>
 
   <library file="OtherThingProducer.cc,OtherThingAlgorithm.cc" name=TestOtherThingProducer>
