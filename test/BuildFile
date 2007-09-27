@@ -79,6 +79,11 @@
    <use name=FWCore/Framework>
   </library>
 
+  <library file="PathAnalyzer.cc" name=FWCoreIntegrationPathAnalyzer>
+    <flags EDM_PLUGIN=1>
+    <use name=FWCore/Framework>
+  </library>
+
   <library file="ValueExample.cc" name=FWCoreIntegrationValueExample>
    <use name=FWCore/ParameterSet>
    <use name=FWCore/Framework>
