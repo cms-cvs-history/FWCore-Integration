@@ -52,6 +52,13 @@
    <use name=FWCore/Framework>
   </library>
 
+  <library file="HistProducer.cc" name=TestHistProducer>
+   <flags EDM_PLUGIN=1>
+   #<use name=DataFormats/TestObjects>
+   <use name=FWCore/Framework>
+   <use name=root>
+  </library>
+
   <library file="ThingSource.cc,ThingAlgorithm.cc" name=TestThingSource>
    <flags EDM_PLUGIN=1>
    <use name=DataFormats/TestObjects>
