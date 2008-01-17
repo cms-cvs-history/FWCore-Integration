@@ -8,6 +8,7 @@
  *
  ************************************************************/
 
+#include "DataFormats/Provenance/interface/EventID.h"
 #include "FWCore/Framework/interface/Frameworkfwd.h"
 #include "FWCore/Sources/interface/RawInputSource.h"
 #include "FWCore/Integration/test/ThingAlgorithm.h"
