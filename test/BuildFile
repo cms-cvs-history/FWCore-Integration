@@ -46,6 +46,12 @@
    <use name=FWCore/Utilities>
   </bin>
 
+# Should be commented out until we start using new final state machine
+#  <bin file=TestIntegration.cpp name=TestIntegrationRunMerge>
+#   <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test run_RunMerge.sh">
+#   <use name=FWCore/Utilities>
+#  </bin>
+
    <bin file=TestIntegration.cpp name=CatchStdExceptiontest>
    <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test CatchStdExceptiontest.sh">
    <use name=FWCore/Utilities>
@@ -99,6 +105,13 @@
 #  </library>
 
   <library file="OtherThingProducer.cc,OtherThingAlgorithm.cc" name=TestOtherThingProducer>
+   <flags EDM_PLUGIN=1>
+   <use name=DataFormats/Common>
+   <use name=DataFormats/TestObjects>
+   <use name=FWCore/Framework>
+  </library>
+
+  <library file="ThingWithMergeProducer.cc" name=TestThingWithMergeProducer>
    <flags EDM_PLUGIN=1>
    <use name=DataFormats/Common>
    <use name=DataFormats/TestObjects>
