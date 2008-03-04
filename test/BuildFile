@@ -1,6 +1,12 @@
 <environment>
   <use name=boost>
 
+  <bin file=TestIntegration.cpp name=TestIntegrationEventHistory>
+   <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test eventHistoryTest.sh">
+   <use name=FWCore/Utilities>
+   <use name=DataFormats/TestObjects>
+  </bin>
+
   <bin file=TestIntegration.cpp name=TestIntegrationRef>
    <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test refTest.sh">
    <use name=FWCore/Utilities>
