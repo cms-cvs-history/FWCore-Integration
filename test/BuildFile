@@ -161,6 +161,14 @@
    <use name=FWCore/MessageLogger>
   </library>
 
+  <library file="ProdigalAnalyzer.cc" name=TestProdigalAnalyzer>
+    <flags EDM_PLUGIN=1>
+   <use name=DataFormats/Common>
+   <use name=DataFormats/TestObjects>
+   <use name=FWCore/Framework>
+   <use name=FWCore/MessageLogger>
+  </library>
+
   <library file="ViewAnalyzer.cc" name=TestViewAnalyzer>
    <flags EDM_PLUGIN=1>
    <use name=DataFormats/Common>
