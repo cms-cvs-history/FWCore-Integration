@@ -84,7 +84,6 @@
    <use name=FWCore/Utilities>
    </bin>
 
-  
   <library file="ThingProducer.cc,ThingAlgorithm.cc" name=TestThingProducer>
    <flags EDM_PLUGIN=1>
    <use name=DataFormats/TestObjects>
@@ -96,6 +95,14 @@
    #<use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
    <use name=root>
+  </library>
+
+  <library file="TestHistoryKeeping.cc" name=TestHistoryKeeping>
+   <flags EDM_PLUGIN=1>
+   <use name=DataFormats/TestObjects>
+   <use name=DataFormats/Provenance>
+   <use name=FWCore/Framework>
+   <use name=FWCore/ParameterSet>
   </library>
 
   <library file="TestRunLumiSource.cc" name=TestRunLumiSource>
