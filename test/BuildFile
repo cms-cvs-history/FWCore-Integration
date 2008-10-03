@@ -64,6 +64,11 @@
    <use name=FWCore/Utilities>
   </bin>
 
+  <bin file=TestIntegration.cpp name=TestIntegrationUnscheduledFailOnOutput>
+   <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test run_unscheduledFailOnOutput.sh">
+   <use name=FWCore/Utilities>
+  </bin>
+
   <bin file=TestIntegration.cpp name=TestIntegrationParentless>
    <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test parentlessTest.sh">
    <use name=FWCore/Utilities>
