@@ -100,6 +100,15 @@
    <use name=FWCore/Framework>
   </library>
 
+  <library file="ProducerWithPSetDesc.cc" name=TestProducerWithPSetDesc>
+   <flags EDM_PLUGIN=1>
+   <use name=DataFormats/TestObjects>
+   <use name=FWCore/Framework>
+   <use name=FWCore/ParameterSet>
+   <use name=DataFormats/Provenance>
+   <use name=FWCore/Utilities>
+  </library>
+
   <library file="HistProducer.cc" name=TestHistProducer>
    <flags EDM_PLUGIN=1>
    #<use name=DataFormats/TestObjects>
