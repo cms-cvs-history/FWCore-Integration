@@ -94,6 +94,13 @@
    <use name=FWCore/Utilities>
    </bin>
 
+  <library file="TestPSetAnalyzer.cc" name=TestPSetAnalyzer>
+   <flags EDM_PLUGIN=1>
+   <use name=DataFormats/Provenance>
+   <use name=FWCore/ParameterSet>
+   <use name=FWCore/Framework>
+  </library>
+
   <library file="ThingProducer.cc,ThingAlgorithm.cc" name=TestThingProducer>
    <flags EDM_PLUGIN=1>
    <use name=DataFormats/TestObjects>
