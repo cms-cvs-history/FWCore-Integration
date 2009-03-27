@@ -94,6 +94,18 @@
    <use name=FWCore/Utilities>
    </bin>
 
+   <bin file=ProcessConfiguration_t.cpp>
+     <use name=FWCore/ParameterSet>
+     <use name=DataFormats/Provenance>
+   </bin>
+
+   <bin file=ProcessHistory_t.cpp>
+     <use name=FWCore/ParameterSet>
+     <use name=DataFormats/Provenance>
+     <use name=FWCore/Version>
+     <use name=FWCore/Utilities>
+   </bin>
+
   <library file="TestPSetAnalyzer.cc" name=TestPSetAnalyzer>
    <flags EDM_PLUGIN=1>
    <use name=DataFormats/Provenance>
