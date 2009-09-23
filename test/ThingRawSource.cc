@@ -7,7 +7,7 @@
 
 namespace edmtest {
   ThingRawSource::ThingRawSource(edm::ParameterSet const& pset, edm::InputSourceDescription const& desc) :
-    RawInputSource(pset, desc), alg_(), eventID_(1, 1) {
+    RawInputSource(pset, desc), alg_(), eventID_(1, 1, 1) {
     produces<ThingCollection, edm::InEvent>();
     produces<ThingCollection, edm::InLumi>("beginLumi");
     produces<ThingCollection, edm::InLumi>("endLumi");
@@ -36,8 +36,8 @@ namespace edmtest {
     // You must call makeEvent,
     // providing the eventId (containing run# and event#)
     // and timestamp.
-    std::auto_ptr<edm::Event> e = makeEvent(eventID_.run(), 1U, eventID_.event(), tstamp);
-    eventID_ = eventID_.next();
+    std::auto_ptr<edm::Event> e = makeEvent(eventID_.run(), eventID_.luminosityBlock(), eventID_.event(), tstamp);
+    eventID_ = eventID_.next(eventID_.luminosityBlock());
 
     // put your product(s) into the event.  One put call per product.
     e->put(result);
