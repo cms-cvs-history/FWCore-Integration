@@ -5,6 +5,7 @@
 #include "FWCore/Framework/interface/LuminosityBlock.h"
 #include "FWCore/Framework/interface/Run.h"
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
+#include "FWCore/Utilities/interface/Exception.h"
 
 #include <cassert>
 #include <iostream>
@@ -59,9 +60,15 @@ namespace edmtest {
     }
 
     if ((index_ + 2U) < expectedRunLumisEvents_.size()) {
-      assert(expectedRunLumisEvents_[index_++] == run.run());
-      assert(expectedRunLumisEvents_[index_++] == 0);
-      assert(expectedRunLumisEvents_[index_++] == 0);
+      if (!(expectedRunLumisEvents_[index_++] == run.run())) {
+        throw cms::Exception("UnexpectedRun", "RunLumiEventAnalyzer::endRun unexpected run");
+      }
+      if (!(expectedRunLumisEvents_[index_++] == 0)) {
+        throw cms::Exception("UnexpectedLumi", "RunLumiEventAnalyzer::endRun unexpected lumi");
+      }
+      if (!(expectedRunLumisEvents_[index_++] == 0)) {
+        throw cms::Exception("UnexpectedEvent", "RunLumiEventAnalyzer::endRun unexpected event");
+      }
     }
   }
 
@@ -91,9 +98,15 @@ namespace edmtest {
     }
 
     if ((index_ + 2U) < expectedRunLumisEvents_.size()) {
-      assert(expectedRunLumisEvents_[index_++] == lumi.run());
-      assert(expectedRunLumisEvents_[index_++] == lumi.luminosityBlock());
-      assert(expectedRunLumisEvents_[index_++] == 0);
+      if (!(expectedRunLumisEvents_[index_++] == lumi.run())) {
+        throw cms::Exception("UnexpectedRun", "RunLumiEventAnalyzer::endLuminosityBlock unexpected run");
+      }
+      if (!(expectedRunLumisEvents_[index_++] == lumi.luminosityBlock())) {
+        throw cms::Exception("UnexpectedLumi", "RunLumiEventAnalyzer::endLuminosityBlock unexpected lumi");
+      }
+      if (!(expectedRunLumisEvents_[index_++] == 0)) {
+        throw cms::Exception("UnexpectedEvent", "RunLumiEventAnalyzer::endLuminosityBlock unexpected event");
+      }
     }
   }
 }
