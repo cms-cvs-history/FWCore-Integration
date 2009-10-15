@@ -26,8 +26,8 @@ namespace edmtest {
     std::vector<unsigned int> expectedRunLumisEvents_;
     int index_;
     bool verbose_;
+    bool dumpTriggerResults_;
   };
-
 }
 
 #endif
