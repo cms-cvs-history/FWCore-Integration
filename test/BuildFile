@@ -11,7 +11,6 @@
   <bin file=TestIntegration.cpp name=TestIntegrationEventHistory>
    <flags TEST_RUNNER_ARGS=" /bin/bash FWCore/Integration/test eventHistoryTest.sh">
    <use name=FWCore/Utilities>
-   <use name=DataFormats/TestObjects>
   </bin>
 
   <bin file=TestIntegration.cpp name=TestIntegrationRef>
@@ -115,13 +114,11 @@
 
   <library file="ThingProducer.cc,ThingAlgorithm.cc" name=TestThingProducer>
    <flags EDM_PLUGIN=1>
-   <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
   </library>
 
   <library file="ProducerWithPSetDesc.cc" name=TestProducerWithPSetDesc>
    <flags EDM_PLUGIN=1>
-   <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
    <use name=FWCore/ParameterSet>
    <use name=DataFormats/Provenance>
@@ -130,14 +127,12 @@
 
   <library file="HistProducer.cc" name=TestHistProducer>
    <flags EDM_PLUGIN=1>
-   #<use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
    <use name=root>
   </library>
 
   <library file="TestHistoryKeeping.cc" name=TestHistoryKeeping>
    <flags EDM_PLUGIN=1>
-   <use name=DataFormats/TestObjects>
    <use name=DataFormats/Provenance>
    <use name=FWCore/Framework>
    <use name=FWCore/ParameterSet>
@@ -145,7 +140,6 @@
 
   <library file="TestRunLumiSource.cc" name=TestRunLumiSource>
    <flags EDM_PLUGIN=1>
-   <use name=DataFormats/TestObjects>
    <use name=DataFormats/Provenance>
    <use name=FWCore/Framework>
    <use name=FWCore/ParameterSet>
@@ -153,20 +147,17 @@
 
   <library file="ThingSource.cc,ThingAlgorithm.cc" name=TestThingSource>
    <flags EDM_PLUGIN=1>
-   <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
   </library>
 
   <library file="ThingExtSource.cc,ThingAlgorithm.cc" name=TestThingExtSource>
    <flags EDM_PLUGIN=1>
-   <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
    <use name=FWCore/Sources>
   </library>
 
   <library file="ThingRawSource.cc,ThingAlgorithm.cc" name=TestThingRawSource>
    <flags EDM_PLUGIN=1>
-   <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
    <use name=FWCore/Sources>
   </library>
@@ -174,7 +165,6 @@
   <library file="OtherThingProducer.cc,OtherThingAlgorithm.cc" name=TestOtherThingProducer>
    <flags EDM_PLUGIN=1>
    <use name=DataFormats/Common>
-   <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
   </library>
 
@@ -211,7 +201,6 @@
   <library file="OtherThingAnalyzer.cc" name=TestOtherThingAnalyzer>
    <flags EDM_PLUGIN=1>
    <use name=DataFormats/Common>
-   <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
    <use name=FWCore/MessageLogger>
   </library>
@@ -225,7 +214,6 @@
   <library file="ProdigalAnalyzer.cc" name=TestProdigalAnalyzer>
     <flags EDM_PLUGIN=1>
    <use name=DataFormats/Common>
-   <use name=DataFormats/TestObjects>
    <use name=FWCore/Framework>
    <use name=FWCore/MessageLogger>
   </library>
@@ -235,7 +223,6 @@
    <use name=FWCore/Framework>
    <use name=FWCore/ParameterSet>
    <use name=DataFormats/Common>
-   <use name=DataFormats/TestObjects>
   </library>
 
   <library file="ViewAnalyzer.cc" name=TestViewAnalyzer>
