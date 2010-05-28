@@ -55,104 +55,128 @@ process.test = cms.EDAnalyzer("TestMergeResults",
         0,           0,      0,   # start
         0,           0,      0,   # begin file 1
         10001,   10002,  10003,   # * begin run 1
+        10001,   10002,  10003,   # * events
         10001,   20004,  10003,   # * begin file 2
         10001,   20004,  10003,   # end run 1
         10001,   10002,  10003,   # * begin run 2
+        10001,   10002,  10003,   # * events
         10001,   10002,  10003,   # begin file 3
         10001,   10002,  10003,   # end run 2
-        10001,   30006,  10003,   # * begin run 1
-        10001,   30006,  10003    # end run 1
+        10001,   10002,  10004,   # * begin run 1
+        10001,   10002,  10004,   # * events
+        10001,   10002,  10004    # end run 1
     ),
                             
     expectedEndRunProd = cms.untracked.vint32(
         0,           0,      0,   # start
         0,           0,      0,   # begin file 1
-        100001, 100002, 100003,   # * begin run 1
+        100001, 100002, 100003,   # begin run 1
+        100001, 100002, 100003,   # * events
         100001, 200004, 100003,   # * begin file 2
         100001, 200004, 100003,   # * end run 1
-        100001, 100002, 100003,   # * begin run 2
+        100001, 100002, 100003,   # begin run 2
+        100001, 100002, 100003,   # * events
         100001, 100002, 100003,   # begin file 3
         100001, 100002, 100003,   # * end run 2
-        100001, 300006, 100003,   # * begin run 1
-        100001, 300006, 100003    # * end run 1
+        100001, 100002, 100004,   # begin run 1
+        100001, 100002, 100004,   # * events
+        100001, 100002, 100004    # * end run 1
     ),
 
     expectedBeginLumiProd = cms.untracked.vint32(
         0,           0,      0,   # start
         0,           0,      0,   # begin file 1
         101,       102,    103,   # * begin run 1 lumi 1
+        101,       102,    103,   # * events
         101,       204,    103,   # * begin file 2
         101,       204,    103,   # end run 1 lumi 1
         101,       102,    103,   # * begin run 2 lumi 1
+        101,       102,    103,   # * events
         101,       102,    103,   # begin file 3
         101,       102,    103,   # end run 2 lumi 1
-        101,       306,    103,   # * begin run 1 lumi 1
-        101,       306,    103    # end run 1 lumi 1
+        101,       102,    104,   # * begin run 1 lumi 1
+        101,       102,    104,   # * events
+        101,       102,    104    # end run 1 lumi 1
     ),
 
     expectedEndLumiProd = cms.untracked.vint32(
         0,           0,      0,   # start
         0,           0,      0,   # begin file 1
-        1001,     1002,   1003,   # * begin run 1 lumi 1
+        1001,     1002,   1003,   # begin run 1 lumi 1
+        1001,     1002,   1003,   # * events
         1001,     2004,   1003,   # * begin file 2
         1001,     2004,   1003,   # * end run 1 lumi 1
-        1001,     1002,   1003,   # * begin run 2 lumi 1
+        1001,     1002,   1003,   # begin run 2 lumi 1
+        1001,     1002,   1003,   # * events
         1001,     1002,   1003,   # begin file 3
         1001,     1002,   1003,   # * end run 2 lumi 1
-        1001,     3006,   1003,   # * begin run 1 lumi 1
-        1001,     3006,   1003    # * end run 1 lumi 1
+        1001,     1002,   1004,   # begin run 1 lumi 1
+        1001,     1002,   1004,   # * events
+        1001,     1002,   1004    # * end run 1 lumi 1
     ),
 
     expectedBeginRunNew = cms.untracked.vint32(
         0,           0,      0,   # start
         0,           0,      0,   # begin file 1
         10001,   10002,  10003,   # * begin run 1
+        10001,   10002,  10003,   # * events
         10001,   10002,  10003,   # * begin file 2
         10001,   10002,  10003,   # end run 1
         10001,   10002,  10003,   # * begin run 2
+        10001,   10002,  10003,   # * events
         10001,   10002,  10003,   # begin file 3
         10001,   10002,  10003,   # end run 2
-        10001,   20004,  10003,   # * begin run 1
-        10001,   20004,  10003    # end run 1
+        10001,   10002,  10003,   # * begin run 1
+        10001,   10002,  10003,   # * events
+        10001,   10002,  10003    # end run 1
     ),
 
     expectedEndRunNew = cms.untracked.vint32(
         0,           0,      0,   # start
         0,           0,      0,   # begin file 1
-        0,           0,      0,   # * begin run 1
+        0,           0,      0,   # begin run 1
+        0,           0,      0,   # * events
         0,           0,      0,   # * begin file 2
         100001, 100002, 100003,   # * end run 1
-        0,           0,      0,   # * begin run 2
+        0,           0,      0,   # begin run 2
+        0,           0,      0,   # * events
         0,           0,      0,   # begin file 3
         100001, 100002, 100003,   # * end run 2
-        100001, 100002, 100003,   # * begin run 1
-        100001, 200004, 100003    # * end run 1
+        0,           0,      0,   # begin run 1
+        0,           0,      0,   # * events
+        100001, 100002, 100003    # * end run 1
     ),
 
     expectedBeginLumiNew = cms.untracked.vint32(
         0,           0,      0,   # start
         0,           0,      0,   # begin file 1
         101,       102,    103,   # * begin run 1 lumi 1
+        101,       102,    103,   # * events
         101,       102,    103,   # * begin file 2
         101,       102,    103,   # end run 1 lumi 1
         101,       102,    103,   # * begin run 2 lumi 1
+        101,       102,    103,   # * events
         101,       102,    103,   # begin file 3
         101,       102,    103,   # end run 2 lumi 1
-        101,       204,    103,   # * begin run 1 lumi 1
-        101,       204,    103    # end run 1 lumi 1
+        101,       102,    103,   # * begin run 1 lumi 1
+        101,       102,    103,   # * events
+        101,       102,    103    # end run 1 lumi 1
     ),
 
     expectedEndLumiNew = cms.untracked.vint32(
         0,           0,      0,   # start
         0,           0,      0,   # begin file 1
-        0,           0,      0,   # * begin run 1 lumi 1
+        0,           0,      0,   # begin run 1 lumi 1
+        0,           0,      0,   # * events
         0,           0,      0,   # * begin file 2
         1001,     1002,   1003,   # * end run 1 lumi 1
-        0,           0,      0,   # * begin run 2 lumi 1
+        0,           0,      0,   # begin run 2 lumi 1
+        0,           0,      0,   # * events
         0,           0,      0,   # begin file 3
         1001,     1002,   1003,   # * end run 2 lumi 1
-        1001,     1002,   1003,   # * begin run 1 lumi 1
-        1001,     2004,   1003    # * end run 1 lumi 1
+        0,           0,      0,   # begin run 1 lumi 1
+        0,           0,      0,   # * events
+        1001,     1002,   1003    # * end run 1 lumi 1
     ),
 
     expectedDroppedEvent1 = cms.untracked.vint32(13, -1, -1, -1, 13),
