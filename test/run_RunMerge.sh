@@ -53,11 +53,11 @@ pushd ${LOCAL_TMP_DIR}
   echo ${test}TEST2------------------------------------------------------------
   cmsRun -p ${LOCAL_TEST_DIR}/${test}TEST2_cfg.py || die "cmsRun ${test}TEST2_cfg.py" $?
 
-  #echo ${test}COPY------------------------------------------------------------
-  #cmsRun -p ${LOCAL_TEST_DIR}/${test}COPY_cfg.py || die "cmsRun ${test}COPY_cfg.py" $?
+  echo ${test}COPY------------------------------------------------------------
+  cmsRun -p ${LOCAL_TEST_DIR}/${test}COPY_cfg.py || die "cmsRun ${test}COPY_cfg.py" $?
 
-  #echo ${test}COPY1------------------------------------------------------------
-  #cmsRun -p ${LOCAL_TEST_DIR}/${test}COPY1_cfg.py || die "cmsRun ${test}COPY1_cfg.py" $?
+  echo ${test}COPY1------------------------------------------------------------
+  cmsRun -p ${LOCAL_TEST_DIR}/${test}COPY1_cfg.py || die "cmsRun ${test}COPY1_cfg.py" $?
 
   echo ${test}PickEvents------------------------------------------------------------
   cmsRun -p ${LOCAL_TEST_DIR}/${test}PickEvents_cfg.py || die "cmsRun ${test}PickEvents_cfg.py" $?

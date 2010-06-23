@@ -27,6 +27,7 @@ process.source = cms.Source("PoolSource",
     )
     , duplicateCheckMode = cms.untracked.string('checkEachFile')
     , skipEvents = cms.untracked.uint32(3)
+    , noEventSort = cms.untracked.bool(False)
 )
 
 process.test = cms.EDAnalyzer('RunLumiEventAnalyzer',
